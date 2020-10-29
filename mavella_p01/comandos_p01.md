@@ -5,9 +5,10 @@
 
 **Respuesta 1:**
 
-..* `echo $SHELL`
+··* `echo $SHELL`
 /bin/bash
-..* `echo $0`
+
+··* `echo $0`
 -bash
 
 **Respuesta 2:**
