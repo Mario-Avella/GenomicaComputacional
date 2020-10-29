@@ -139,6 +139,7 @@ Desde el mismo directorio en el que estamos de la respuesta anterior se ejecuta 
 **Respuesta 3:**
 
 Desde el directorio mavella_p01 se ejecutan los siguientes comandos `cd data/raw_data && head -n1 splike_c.faa splike_b.faa splike_a.faa` y se reporta la primera línea de los archivos splike_*.faa:
+
 head -n1 splike_c.faa
 > pdb|6VXX|C Chain C, SARS-CoV-2 spike glycoprotein
 head -n1 splike_b.faa
