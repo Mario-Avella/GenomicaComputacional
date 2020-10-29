@@ -123,7 +123,7 @@ Downloads marioavella$ `mv splike_c.faa splike_b.faa splike_a.faa sarscov2_genom
 Se proporciona el resumen a continuación:
 >**Función de la proteína**: La proteína espícula (Spike protein) es la parte de la maquinaria vírica que regula la entrada del coronavirus en las células del hospedero. Se conforma por dos dominios principalmente, entre los que se encuentran el dominio S1 N-terminal (S1-NTD) y el dominio C terminal (S1-CTD). Los S1-NTD son responsables para unir azúcar y el S1-CTD son responsables de reconocer los receptores proteicos de ACE2, APN y DPP4. Una vez que el virus entra al cuerpo del hospedero y reconoce los receptores celulares a los que invade, las proteasas hacen un corte que activan el mecanismo, en el que la subunidad S1 en su conformación de prefusión se une a la membrana de la célula hospedera y tira de la membrana celular para fusionarse con la membrana vírica; en este momento el RNA vírico ingresa a la célula y las proteínas espícula pasan a su conformación de profusión. 
 
-#Parte IV
+# Parte IV
 
 **Respuesta 1:**
 
@@ -154,7 +154,7 @@ head -n1 splike_a.faa
 
 `mv data/raw_data/splike_*.faa ~/GenomicaComputacional/mavella_p01/archive/`
 
-..* ¿Qué pasó con las ligas simbólicas suaves? 
+* ¿Qué pasó con las ligas simbólicas suaves? 
 > Estas se rompieron: si cambias la ubicación de los documentos, al abrir la liga simbólica aparece que no existe el archivo original.
 
 **Respuesta 6:**
@@ -237,7 +237,7 @@ Explica la diferencia entre los siguientes formatos:
 `fasta`
 > Secuencias de nucleótidos
 
-..* En el formato FASTA (al que hacen referencia los `.fasta` y `.faa`) una secuencia comienza con una línea de cabecera con '>' que indica el ID de secuencia (identificadores) y una breve descripción, seguida por líneas de datos de secuencia. No debería existir espacio entre el '>' y la primera letra del identificador. En el formato FASTA se recomienda que todas las líneas de texto sean menores de 80 caracteres, mientras que en [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) la secuencia y los puntajes de calidad generalmente se colocan en una sola línea cada uno. Un archivo FASTQ normalmente usa cuatro líneas por secuencia.
+* En el formato FASTA (al que hacen referencia los `.fasta` y `.faa`) una secuencia comienza con una línea de cabecera con '>' que indica el ID de secuencia (identificadores) y una breve descripción, seguida por líneas de datos de secuencia. No debería existir espacio entre el '>' y la primera letra del identificador. En el formato FASTA se recomienda que todas las líneas de texto sean menores de 80 caracteres, mientras que en [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) la secuencia y los puntajes de calidad generalmente se colocan en una sola línea cada uno. Un archivo FASTQ normalmente usa cuatro líneas por secuencia.
 ..a) La línea 1 comienza con un carácter '@' y va seguida de un identificador de secuencia y una descripción opcional (como una línea de título FASTA).
 ..b) La línea 2 son las letras de secuencia sin formato.
 ..c) La línea 3 comienza con un carácter '+' y opcionalmente va seguida de nuevo por el mismo identificador de secuencia (y cualquier descripción).
@@ -258,7 +258,7 @@ Al abrir el archivo con `less sarscov2_genomee.gff3`, la información se present
 
 > La diferencia entre `gene` y `CDS` es que "[CDS](https://en.wikipedia.org/wiki/Coding_region)" (proveniente de "coding sequence") es la región codificante del gen o el conjunto de exones, o sea la región que se traduce a proteína, y "gene" representaría todo el gen, incluyendo intrones y exones.
 
-#**Ejercicio Extra**
+# **Ejercicio Extra**
 
 **Respuesta 1:**
 
