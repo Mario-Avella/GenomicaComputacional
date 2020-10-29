@@ -5,10 +5,10 @@
 
 **Respuesta 1:**
 
-··* `echo $SHELL`
+* `echo $SHELL`
 /bin/bash
 
-··* `echo $0`
+* `echo $0`
 -bash
 
 **Respuesta 2:**
@@ -27,7 +27,7 @@ Tras visitar éste [repositorio](https://github.com/u-genoma/BioinfinvRepro/blob
 De manera que se supone una organización que contemple un directorio para los datos (que incluiría aquellos "datos crudos[*raw_data/*]" y aquellos sometidos a un filtro "[*filtered/*]") que en nuestro caso serían de genomas. Igualmente se contemplarían directorios para los scripts realizados y utilizados en los análisis (*scripts/*), separando aquellos que exclusivamente se utilizarían para generar figuras en su propio directorio (*figures/*). Idealmente también se contempla un directorio para almacenar información referente a las muestras, documentos para procesar los datos y los metadatos (*meta/*), éste directorio suele ponerse a parte o incluirse en el de "datos". Por último, se puede incluir un directorio que sirviese de "archivo" (*archive/*), donde se depositen los scripts que no *sirvieron* pero que no queremos borrar. En el repositorio nos dicen que este directorio NO se sube pero es bueno tenerlo. 
 De todas formas, la lógica de la ordenación que se realice de los directorios y los datos debe ir explicada a detalle en un archivo **README**.
 
-#Parte II
+# Parte II
 
 `cd scripts/ && touch delay.sh && nano delay.sh`
 Se introdujeron las siguientes líneas de código:
@@ -80,7 +80,7 @@ Como no queremos esperar 300 segundos, _cancelamos_ el proceso utilizando su PID
 [1]+  Killed: 9               ./delay.sh
 ```
 
-#Parte III
+# Parte III
 
 **Respuesta 1:**
 
