@@ -251,6 +251,7 @@ Explica la diferencia entre los siguientes formatos:
 Al abrir el archivo con `less sarscov2_genomee.gff3`, la información se presenta por líneas. En cambio, `less -S sarscov2_genome.gff3` comprime los espacios consecutivos en blanco (hace que las líneas más largas que el ancho de la pantalla se corten o trunquen en lugar de ajustarlas) y por lo mismo se ve más organizado el texto porque no se muestra la parte de una línea larga que no cabe en el ancho de la pantalla. A diferencia de otros comandos similares (como `more`), `less` permite una completa navegación por el contenido del archivo, ya que pone los espacios y "sobrantes" de la información, en este caso sobre la secuencia, en la siguienta línea.
 
 **Respuesta 11:**
+
 `grep 'gene' sarscov2_genome.gff3 | sort -k3 | cut -f3 | uniq -c`
 
 13 CDS
