@@ -255,7 +255,9 @@ Al abrir el archivo con `less sarscov2_genomee.gff3`, la información se present
 `grep 'gene' sarscov2_genome.gff3 | sort -k3 | cut -f3 | uniq -c`
 
 13 CDS
+
 **11 gene** #Tiene 11 genes el archivo#
+
 4 stem_loop
 
 > El campo tres corresponde a las regiones del gen.
