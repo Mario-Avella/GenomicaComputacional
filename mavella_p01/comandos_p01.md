@@ -142,8 +142,10 @@ Desde el directorio mavella_p01 se ejecutan los siguientes comandos `cd data/raw
 
 head -n1 splike_c.faa
 > pdb|6VXX|C Chain C, SARS-CoV-2 spike glycoprotein
+
 head -n1 splike_b.faa
 > pdb|6VXX|B Chain B, SARS-CoV-2 spike glycoprotein
+
 head -n1 splike_a.faa
 > pdb|6VXX|A Chain A, SARS-CoV-2 spike glycoprotein
 
