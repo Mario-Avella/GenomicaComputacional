@@ -5,9 +5,10 @@
 
 **Respuesta 1:**
 
-..* `echo $SHELL`
+* `echo $SHELL`
 /bin/bash
-..* `echo $0`
+
+* `echo $0`
 -bash
 
 **Respuesta 2:**
@@ -23,10 +24,11 @@
 ¿A qué se debe el nombre y la organización de los directorios que acabamos de crear? 
 Tras visitar éste [repositorio](https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad2/Unidad2_Organizacion_proyecto_bioinf.md) me queda claro que la organización de los directorios y los nombres responden a un orden que contemple la naturaleza de los datos y procesos, así como los productos del análisis. Sigue una pauta más o menos estándar en la comunidad y en aquellos repositorios de datos, de manera que esto influye mucho con el concepto y problema de reproducibilidad de la ciencia. La autora del repositorio comenta lo siguiente:
 > Un proyecto bioinformático consiste en los datos crudos, datos procesados, scripts y documentación necesarios para reproducir los análisis realizados
+
 De manera que se supone una organización que contemple un directorio para los datos (que incluiría aquellos "datos crudos[*raw_data/*]" y aquellos sometidos a un filtro "[*filtered/*]") que en nuestro caso serían de genomas. Igualmente se contemplarían directorios para los scripts realizados y utilizados en los análisis (*scripts/*), separando aquellos que exclusivamente se utilizarían para generar figuras en su propio directorio (*figures/*). Idealmente también se contempla un directorio para almacenar información referente a las muestras, documentos para procesar los datos y los metadatos (*meta/*), éste directorio suele ponerse a parte o incluirse en el de "datos". Por último, se puede incluir un directorio que sirviese de "archivo" (*archive/*), donde se depositen los scripts que no *sirvieron* pero que no queremos borrar. En el repositorio nos dicen que este directorio NO se sube pero es bueno tenerlo. 
 De todas formas, la lógica de la ordenación que se realice de los directorios y los datos debe ir explicada a detalle en un archivo **README**.
 
-#Parte II
+# Parte II
 
 `cd scripts/ && touch delay.sh && nano delay.sh`
 Se introdujeron las siguientes líneas de código:
@@ -79,7 +81,7 @@ Como no queremos esperar 300 segundos, _cancelamos_ el proceso utilizando su PID
 [1]+  Killed: 9               ./delay.sh
 ```
 
-#Parte III
+# Parte III
 
 **Respuesta 1:**
 
@@ -121,7 +123,7 @@ Downloads marioavella$ `mv splike_c.faa splike_b.faa splike_a.faa sarscov2_genom
 Se proporciona el resumen a continuación:
 >**Función de la proteína**: La proteína espícula (Spike protein) es la parte de la maquinaria vírica que regula la entrada del coronavirus en las células del hospedero. Se conforma por dos dominios principalmente, entre los que se encuentran el dominio S1 N-terminal (S1-NTD) y el dominio C terminal (S1-CTD). Los S1-NTD son responsables para unir azúcar y el S1-CTD son responsables de reconocer los receptores proteicos de ACE2, APN y DPP4. Una vez que el virus entra al cuerpo del hospedero y reconoce los receptores celulares a los que invade, las proteasas hacen un corte que activan el mecanismo, en el que la subunidad S1 en su conformación de prefusión se une a la membrana de la célula hospedera y tira de la membrana celular para fusionarse con la membrana vírica; en este momento el RNA vírico ingresa a la célula y las proteínas espícula pasan a su conformación de profusión. 
 
-#Parte IV
+# Parte IV
 
 **Respuesta 1:**
 
@@ -137,10 +139,13 @@ Desde el mismo directorio en el que estamos de la respuesta anterior se ejecuta 
 **Respuesta 3:**
 
 Desde el directorio mavella_p01 se ejecutan los siguientes comandos `cd data/raw_data && head -n1 splike_c.faa splike_b.faa splike_a.faa` y se reporta la primera línea de los archivos splike_*.faa:
+
 head -n1 splike_c.faa
 > pdb|6VXX|C Chain C, SARS-CoV-2 spike glycoprotein
+
 head -n1 splike_b.faa
 > pdb|6VXX|B Chain B, SARS-CoV-2 spike glycoprotein
+
 head -n1 splike_a.faa
 > pdb|6VXX|A Chain A, SARS-CoV-2 spike glycoprotein
 
@@ -152,7 +157,7 @@ head -n1 splike_a.faa
 
 `mv data/raw_data/splike_*.faa ~/GenomicaComputacional/mavella_p01/archive/`
 
-..* ¿Qué pasó con las ligas simbólicas suaves? 
+* ¿Qué pasó con las ligas simbólicas suaves? 
 > Estas se rompieron: si cambias la ubicación de los documentos, al abrir la liga simbólica aparece que no existe el archivo original.
 
 **Respuesta 6:**
@@ -235,7 +240,7 @@ Explica la diferencia entre los siguientes formatos:
 `fasta`
 > Secuencias de nucleótidos
 
-..* En el formato FASTA (al que hacen referencia los `.fasta` y `.faa`) una secuencia comienza con una línea de cabecera con '>' que indica el ID de secuencia (identificadores) y una breve descripción, seguida por líneas de datos de secuencia. No debería existir espacio entre el '>' y la primera letra del identificador. En el formato FASTA se recomienda que todas las líneas de texto sean menores de 80 caracteres, mientras que en [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) la secuencia y los puntajes de calidad generalmente se colocan en una sola línea cada uno. Un archivo FASTQ normalmente usa cuatro líneas por secuencia.
+* En el formato FASTA (al que hacen referencia los `.fasta` y `.faa`) una secuencia comienza con una línea de cabecera con '>' que indica el ID de secuencia (identificadores) y una breve descripción, seguida por líneas de datos de secuencia. No debería existir espacio entre el '>' y la primera letra del identificador. En el formato FASTA se recomienda que todas las líneas de texto sean menores de 80 caracteres, mientras que en [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) la secuencia y los puntajes de calidad generalmente se colocan en una sola línea cada uno. Un archivo FASTQ normalmente usa cuatro líneas por secuencia.
 ..a) La línea 1 comienza con un carácter '@' y va seguida de un identificador de secuencia y una descripción opcional (como una línea de título FASTA).
 ..b) La línea 2 son las letras de secuencia sin formato.
 ..c) La línea 3 comienza con un carácter '+' y opcionalmente va seguida de nuevo por el mismo identificador de secuencia (y cualquier descripción).
@@ -246,17 +251,20 @@ Explica la diferencia entre los siguientes formatos:
 Al abrir el archivo con `less sarscov2_genomee.gff3`, la información se presenta por líneas. En cambio, `less -S sarscov2_genome.gff3` comprime los espacios consecutivos en blanco (hace que las líneas más largas que el ancho de la pantalla se corten o trunquen en lugar de ajustarlas) y por lo mismo se ve más organizado el texto porque no se muestra la parte de una línea larga que no cabe en el ancho de la pantalla. A diferencia de otros comandos similares (como `more`), `less` permite una completa navegación por el contenido del archivo, ya que pone los espacios y "sobrantes" de la información, en este caso sobre la secuencia, en la siguienta línea.
 
 **Respuesta 11:**
+
 `grep 'gene' sarscov2_genome.gff3 | sort -k3 | cut -f3 | uniq -c`
 
 13 CDS
+
 **11 gene** #Tiene 11 genes el archivo#
+
 4 stem_loop
 
 > El campo tres corresponde a las regiones del gen.
 
 > La diferencia entre `gene` y `CDS` es que "[CDS](https://en.wikipedia.org/wiki/Coding_region)" (proveniente de "coding sequence") es la región codificante del gen o el conjunto de exones, o sea la región que se traduce a proteína, y "gene" representaría todo el gen, incluyendo intrones y exones.
 
-#**Ejercicio Extra**
+# **Ejercicio Extra**
 
 **Respuesta 1:**
 
